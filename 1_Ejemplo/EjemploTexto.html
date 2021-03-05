@@ -1,18 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
-<!--fsdfsdf-->
+  <!--
+    Esto indica que es un comentario.
+  author:
+  datetime:
+  -->
 
 <head>
-  <title>Estructura de Texto</title>
-  <link rel="stylesheet" type="text/css" href="/css/ejemplo.css" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />  
+  <title>Estructura de Texto</title> <!--Se muestra en las estañas del navegador -->
+
+  <link rel="stylesheet" type="text/css" href="/css/ejemplo.css" /> <!--Define la referencia del archivo donde se ocuparan los elementos escritos en el documentos css.-->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/ico" /> <!--Hace referencia al icono que se mostrará en la pestaña del navegador-->
   <link rel="alternate" type="application/rss+xml" title="Resumen de todos los artículos del blog" href="/feed.xml" />
 
+  <!--Los metadatos ayudan a posicionar nuestra página en las búsquedas de los navegadores-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="description" content="Ejemplo de XHTML y HTML5"/>
   <meta name="keywords" content="HTML5, HTML, XHTML"/>
   <meta name="author" content="Dannas"/>
-  
+  <!--ogp.com-->
+
+  <!--De preferencia utilizar OpenGraph: -->
+  <meta property="og:tittle" content="Estructura de Texto"/>
+  <meta property="og:description" content="Ejemplo de HTML5"/>
+  <meta property="og:author" content="JanethCJ ft Daniel J."/>
+
+  <!--
+  Con esta etiqueta nos indica que cuando la página se abra se mostrará la alerta descrita a continuación.
+  Esta etiqueta es para JavaScript
+  -->
   <script type="text/javascript">
     //<![CDATA[
       window.onload = function() { alert("La página se ha cargado exitosamente :)"); }
@@ -21,26 +37,33 @@
 </head>
 
 <body>
-<noscript>
-  <p>Bienvenidos.</p>
-  <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
-Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
-</noscript>
-<img src="logotipo.gif" alt="Logotipo de esta página" />
+  <noscript> <!--Necesita implementar JavaScript con esta etiqueta-->
+    <p>Bienvenidos.</p>
+    <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+  Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
+  </noscript>
+  <img src="imagen.gif" alt="Logotipo de esta página" /> <!--src: nombre de la imagen. alt: texto que se mostrará si la imagen no esta presente. Siempre debe de ir.-->
 <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a></li> 
-    <li><a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a></li>
+    <li>
+      <a href="#">Inicio</a> <!--Ancla: podemos ir a esa parte del documento. #: Hace referencia al mismo documento.-->
+      <!--target="": define en donde se abrira esa ancla (_blank(abre en otro lado), _top, _parent, _self)-->
+    </li>
+    <li>
+      <a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a> <!--Las anclas también sirven para descargar archivos-->
+    </li>
+    <li>
+      <a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a>
+    </li>
   </ul>
 <hr/>
 <h2>Lenguajes de marcado.</h2>
 <dl>
   <dt>SGML</dt>
   <dd>Metalenguaje para la definición de otros lenguajes de marcado</dd>
- 
+
   <dt>XML</dt>
   <dd>Lenguaje basado en SGML y que se emplea para describir datos</dd>
- 
+
   <dt>RSS</dt>
   <dt>GML</dt>
   <dt>XHTML</dt>
@@ -52,7 +75,7 @@ Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
 
 <h2>HTML</h2>
 
-<p>El lenguaje <acronym title="HyperText Markup Language"><strong><em>HTML</em></strong></acronym> es estandarizado 
+<p>El lenguaje <acronym title="HyperText Markup Language"><strong><em>HTML</em></strong></acronym> es estandarizado
 por el <acronym title="World Wide Web Consortium"><strong><em>W3C</em></strong></acronym>.</p>
 
 <h3>HTML 5</h3>
@@ -118,7 +141,7 @@ por el <acronym title="World Wide Web Consortium"><strong><em>W3C</em></strong><
 <p><del datetime="20150130" cite="http://es.wikipedia.org/wiki/Web_2.0">Un sitio Web 1.0</del><ins datetime="20150130" cite="http://es.wikipedia.org/wiki/Web_2.0">Un sitio Web 2.0</ins> permite a los usuarios interactuar y colaborar entre sí como <em>"creadores de contenido generado por usuarios en una comunidad virtual"</em>, a diferencia de sitios web estáticos donde los usuarios se limitan a la observación pasiva de los contenidos que se han creado para ellos.</p>
 
 <blockquote><em><strong>Web 2.0</strong> son las comunidades web, los servicios web, las aplicaciones Web, los servicios de red social, los servicios de alojamiento de videos, las wikis, blogs, mashups y folcsonomías."</em></blockquote>
-<p>Es la Evolución de las aplicaciones estáticas a dinámicas donde la colaboración del usuario es necesaria. El término <em>Web 2.0</em> está asociado estrechamente con <a href="http://es.wikipedia.org/wiki/Tim_O%27Reilly" target="_blank" hreflang="es-MX" type="text/html" charset="UTF-8"><em>Tim O'Reilly</em></a>, debido a la conferencia sobre la Web 2.0 de O'Reilly Media en 2004.Aunque el término sugiere una nueva versión de la World Wide Web, no se refiere a una actualización de las especificaciones técnicas de la web, sino más bien a cambios acumulativos en la forma en la que desarrolladores de software y usuarios finales utilizan la Web.</p> 
+<p>Es la Evolución de las aplicaciones estáticas a dinámicas donde la colaboración del usuario es necesaria. El término <em>Web 2.0</em> está asociado estrechamente con <a href="http://es.wikipedia.org/wiki/Tim_O%27Reilly" target="_blank" hreflang="es-MX" type="text/html" charset="UTF-8"><em>Tim O'Reilly</em></a>, debido a la conferencia sobre la Web 2.0 de O'Reilly Media en 2004.Aunque el término sugiere una nueva versión de la World Wide Web, no se refiere a una actualización de las especificaciones técnicas de la web, sino más bien a cambios acumulativos en la forma en la que desarrolladores de software y usuarios finales utilizan la Web.</p>
 <p>El hecho de que la Web 2.0 es cualitativamente diferente de las tecnologías web anteriores ha sido cuestionado por el creador de la World Wide Web <a href="http://es.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" hreflang="es-MX" type="text/html" charset="UTF-8"><em>Tim Berners-Lee</em></a>, quien calificó al término como <em>"tan sólo una jerga"- precisamente porque tenía la intención de que la Web incorporase estos valores en el primer lugar</em></p>
 <p>En conclusión, la Web 2.0 nos permite realizar trabajo colaborativo entre varios usuarios o colaboradores. Además, las herramientas que ofrece la web 2.0 no sólo permitirán mejorar los temas en el aula de clase, sino también pueden utilizarse para trabajo en empresa. La web 2.0 permite a estudiantes y docentes mejorar las herramientas utilizadas en el aula de clase. El trabajo colaborativo esta tomando mucha importancia en las actividades que realicemos en internet.</p>
 
@@ -135,7 +158,7 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 <p>Los teóricos de la aproximación a la Web 2.0 piensan que el uso de la web está orientado a la interacción y redes sociales, que pueden servir contenido que explota los efectos de las redes, creando o no webs interactivas y visuales. Es decir, los sitios Web 2.0 actúan más como puntos de encuentro o webs dependientes de usuarios, que como webs tradicionales.</p>
 <pre>
  ________________________________________________
-| Web 1.0               | Web 2.0                | 
+| Web 1.0               | Web 2.0                |
 |------------------------------------------------|
 | DoubleClick     	| AdSense                |
 | Ofoto            	| Flickr                 |
@@ -143,16 +166,16 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 | Akamai          	| BitTorrent             |
 | Napster          	| Mp3.com                |
 | Enciclopedia Británica| Wikipedia              |
-| webs personales 	| blogging               | 
+| webs personales 	| blogging               |
 | Páginas vistas  	| coste por clic         |
-| screen scraping 	| servicios web          | 
+| screen scraping 	| servicios web          |
 | Publicación     	| participación          |
-| hotmail         	| Gmail AOL              | 
+| hotmail         	| Gmail AOL              |
 | directorios(taxonomía)| etiquetas (folcsonomía)|
 |________________________________________________|
 </pre>
 
-<img src="imagen.gif" usemap="#mapa_zonas" /> 
+<img src="imagen.gif" usemap="#mapa_zonas" />
 <map name="mapa_zonas">
   <area shape="rect" coords="20,25,84,113" href="#" />
   <area shape="polygon" coords="90,25,162,26,163,96,89,25,90,24" href="#" />
@@ -165,42 +188,42 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 <h1>Contacto</h1>
 <fieldset>
   <legend>Datos básicos</legend>
- 
+
   <label for="nombre">Nombre</label> <br/>
   <input type="text" name="nombre" id="nombre" size="50" maxlength="250" />
- 
+
   <br/><br/>
- 
+
   <label for="descripcion">Descripción</label> <br/>
   <textarea name="descripcion" id="descripcion" cols="40" rows="5"></textarea>
- 
+
   <br/><br/>
- 
+
   Foto <input type="file" name="foto" />
- 
+
   <br/><br/>
- 
+
   <input name="contador" type="checkbox" value="si" /> Añadir contador de visitas
 </fieldset>
- 
+
 <fieldset>
   <legend>Datos económicos</legend>
- 
-  <label for="precio">Precio</label> 
+
+  <label for="precio">Precio</label>
   <input type="text" size="5" id="precio" name="precio" /> $;
- 
+
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- 
-  <label for="impuestos">Impuestos</label> 
+
+  <label for="impuestos">Impuestos</label>
   <select id="impuestos" name="impuestos">
     <option value="4">4%</option>
     <option value="7">7%</option>
     <option value="16">16%</option>
     <option value="25">25%</option>
   </select>
- 
+
   <br/><br/>
- 
+
   <label>Promoción</label> <br/>
   <input type="radio" name="promocion" value="ninguno" checked="checked" /> Ninguno <br/>
   <input type="radio" name="promocion" value="portes" /> Transporte gratuito <br/>
@@ -223,7 +246,7 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 </fieldset>
 
 <h1>Ejercicio</h1>
- 
+
 <ol>
   <li>Descargar ejemplo de la <a href="http://132.248.92.107/danrosales/cursos/" target="_blank">plataforma</a></li>
   <li>Completar la lista de definiciones de lenguajes de marcado.</li>
